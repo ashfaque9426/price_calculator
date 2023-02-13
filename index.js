@@ -4,9 +4,6 @@ document.getElementById('btn-apply').addEventListener("click", () => {
     const inputCouponValue = document.getElementById("coupon-input").value;
     const pleasePayField = document.getElementById("priceAmountWithDiscount");
 
-    
-    
-
     // validating coupon code
     if (inputCouponValue.includes("DISC")) {
         // discount amount
@@ -19,5 +16,4 @@ document.getElementById('btn-apply').addEventListener("click", () => {
     }
 
     return true;
-    
 });
