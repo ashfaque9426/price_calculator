@@ -8,7 +8,12 @@ document.getElementById('btn-apply').addEventListener("click", () => {
     if (inputCouponValue.includes("DISC")) {
         // discount amount
         const discountAmount = parseFloat(inputCouponValue.slice(4));
-        pleasePayField.innerText = `${(discountAmount * priceAmountValue)/100} taka only, Special Note: The discounted price`;
+        if(discountAmount > 50) {
+            const discountValue = priceAmountValue * (discountAmount / 100);
+            pleasePayField.innerText = `${priceAmountValue - discountValue} taka only, Special Note: The discounted price`;
+        } else {
+            pleasePayField.innerText = `${priceAmountValue * (discountAmount / 100)} taka only, Special Note: The discounted price`;
+        }
     } else {
         alert("please insert a valid coupon code to get the discount");
         pleasePayField.innerText = "please insert a valid coupon code to get the discount";
