@@ -15,6 +15,4 @@ document.getElementById('btn-apply').addEventListener("click", () => {
         pleasePayField.innerText = "please insert a valid coupon code to get the discount";
         return;
     }
-
-    return true;
 });
