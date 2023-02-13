@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("./jeremy-thomas-O6N9RV2rzX8-unsplash.jpg");
+            background-size: cover;
+        }
+
+        main {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        main input {
+            padding: 5px;
+        }
+
+        main button {
+            width: 100%;
+            padding: 5px 9px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white">Discount Price Calculator</h1>
+    </header>
+
+    <main>
+        <input span id="price-amount" type="text" placeholder="Input Price">
+        <input type="text" id="coupon-input" placeholder="Input Coupon Code">
+        <button id="btn-apply">Apply</button>
+        <p style="color: white">Please Pay: <span id="priceAmountWithDiscount"></span></p>
+    </main>
+</body>
+</html>
